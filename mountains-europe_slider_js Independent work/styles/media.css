@@ -1,0 +1,91 @@
+
+@media screen and (max-width: 765px) {
+
+    .nav__logo-burger_parent{
+        display: block;
+        position: relative;
+        transition: all 1s;
+        z-index: 2;
+    }
+    .nav__list-wrapper{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(36, 35, 35, 0.808);
+        position: absolute;
+        top: 0;
+        left: -150%;
+        padding: 2rem;
+        transition: all 1s;
+    }
+    .show-burger_parent{
+        transform: translateX(85vw);
+    }
+    .show-nav__list{
+        left: 0;
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav__list-item{
+        width: 90%;
+        margin: 10px;
+
+    }
+    .nav__list-item > a{
+        font-size: 1.5rem;
+        width: 80%;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 5px;
+        transition: all .3s;
+    }
+    .nav__list-item > a:hover{
+        background-color: black;
+    }
+    .nav__wrapper{
+        justify-content: start;
+    }
+
+    .main__wrapper{
+        grid-template-rows: 50% 50%;
+    }
+    .main__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main__header-title{
+        font-size: 12vw;
+        text-align: center;
+    }
+    .main__header-text, .main__more{
+        width: auto;
+        text-align: center;
+    }
+    .main__list{
+        flex-direction: column;
+    }
+    .main__more, .main__more-button{
+        margin-bottom: 5%;
+    }
+
+    .main_mountains{
+        width: 90%;
+        margin: 0 0 0 auto;
+    }
+    .mountains__list{
+        justify-content: center;
+    }
+    .mountains__list-item{
+        margin-right: 10px;
+        left: 40px;
+    }
+    
+    .mountains__controls-left{
+        left: -30px; 
+        z-index: 2;
+    }
+
+}

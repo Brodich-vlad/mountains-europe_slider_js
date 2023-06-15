@@ -1,0 +1,221 @@
+
+body, ul, li, h1, h2, h3, p, span, button{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black;
+}
+h1, h2, h3, p, span, li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3{
+    color: rgb(225, 225, 225);
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.hide{
+    display: none !important;
+}
+
+.wrapper{
+    height: 100%;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.nav{
+    position: fixed;
+    height: 75px;
+    width: 100vw;
+    color: rgb(225, 225, 225);
+    z-index: 100;
+}
+
+.nav__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo{
+    display: flex;
+}
+.nav__logo-burger_parent{
+    cursor: pointer;
+    display: none;
+}
+.nav__logo-burger_child{
+    position: relative;
+    width: 30px;
+    height: 2.5px;
+    border-radius: 2em;
+    margin-right: 50px;
+    user-select: none;
+    background-color: rgb(225, 225, 225);
+}
+.nav__logo-burger_child::after{
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 5px;
+    width: 20px;
+    height: 2.5px;
+    border-radius: 2em;
+    user-select: none;
+    background-color: rgb(225, 225, 225);
+}
+.nav__logo-burger_child::before{
+    content: "";
+    position: absolute;
+    top: 22px;
+    width: 30px;
+    height: 2.5px;
+    border-radius: 2em;
+    user-select: none;
+    background-color: rgb(225, 225, 225);
+}
+
+.nav__list-item{
+    display: inline-block;
+    margin-right: 50px;
+}
+.nav__list-item:last-child{
+    margin-right: 0;
+}
+
+
+.main{
+    height: 100vh;
+    background-color: rgb(10, 10, 10);
+}
+.main__wrapper{
+    position: relative;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    z-index: 1;
+}
+.main__background{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70vw;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, .9)), top center / auto 100% no-repeat url('../img/mountain_1.jpg');
+    z-index: 0;
+}
+
+.main__header{
+    padding-top: 15%;
+}
+.main__header-title{
+    font-size: 125px;
+}
+.main__header-text{
+    font-size: 18px;
+    color: white;
+}
+.main__header-text, .main__more{
+    width: 20vw;
+}
+
+.main__list{
+    display: flex;
+}
+.main__more{
+    margin-right: 10vw;
+}
+.main__more-button{
+    border: 0;
+    margin-bottom: 25%;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: orangered;
+    background-color: transparent;
+}
+.main__more-text{
+    color: gray;
+}
+
+.main_mountains{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.main_mountains, .mountains__list{
+    display: flex;
+    position: relative;
+}
+
+.mountains__list-items-slider{
+    display: flex;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 1.5s;
+}
+
+.left{
+  transform: translateX(-105%);
+}
+.right{
+    transform: translateX(105%);
+}
+
+.mountains__list{
+    width: 95%;
+    overflow: hidden;
+}
+.mountains__list-item{
+    display: block;
+    width: clamp(200px, 80%, 400px);
+    height: clamp(100px, 70%, 300px);
+    margin-right: 15px;
+    position: relative;
+    transition: all .3s;
+}
+.mountains__list-item:hover,
+.mountains__list-item:focus{
+    transform: scale(1.02);
+}
+.mountain__img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.mountains__controls{
+    position: absolute;
+    top: 35%;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background-color: rgb(225, 225, 225);
+}
+
+.mountains__controls-left{
+    position: absolute;
+    top: 35%;
+    left: -60px;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background-color: rgb(225, 225, 225); 
+}
